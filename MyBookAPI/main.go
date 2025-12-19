@@ -31,6 +31,7 @@ func calledDeleteMethod(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte(`{"method:" : "DELETE Operation","message":"Hello-World"}`))
 }
 
+// Clean up resources
 func calledNoMethod(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusNotFound)
