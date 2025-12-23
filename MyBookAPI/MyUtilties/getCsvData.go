@@ -79,6 +79,7 @@ func SearchByBookID(bookId string)(BookStructure, error){
     return BookStructure{}, errors.New("BookID received in the request is NOT Found")
 }
 
+// Validate input before processing
 func MarshalData(dataobj interface{})[]byte{
     fmt.Println(dataobj, reflect.TypeOf(dataobj), reflect.TypeOf(dataobj).Kind())
     data, _ := json.Marshal(dataobj)
